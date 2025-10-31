@@ -2,3 +2,22 @@ backend:
   name: github
   repo: atchouna-blip/jsb3-site
   branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "site"
+    label: "Contenus du site"
+    files:
+      - file: "content/site.json"
+        label: "Paramètres & Sections"
+        name: "site"
+        fields:
+          - { label: "Nom de l’événement", name: "eventName", widget: "string" }
+          # ... Ajoute/recopie ici au moins un champ pour tester
+
+media_library:
+  name: uploadcare
+  config:
+    publicKey: demopublickey
