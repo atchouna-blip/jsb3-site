@@ -2,6 +2,7 @@ backend:
   name: github
   repo: atchouna-blip/jsb3-site
   branch: main
+  open_authoring: true
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
