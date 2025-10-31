@@ -7,12 +7,8 @@ backend:
   client_secret: f9117d88fff1b306f3f84805797c6faddf3cc259
 
 publish_mode: editorial_workflow
-
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
-
-# (collections JSB3 ici)
-
 
 collections:
   - name: "site"
@@ -26,7 +22,6 @@ collections:
           - { label: "Thème", name: "theme", widget: "string" }
           - { label: "Dates (affichage)", name: "datesDisplay", widget: "string" }
           - { label: "Lieu (affichage)", name: "venueDisplay", widget: "string" }
-          # (Ajoute tes autres champs à la suite...)
   - name: "speakers"
     label: "Conférenciers invités"
     files:
@@ -39,11 +34,11 @@ collections:
             name: "items"
             widget: "list"
             fields:
-              - {label: "Nom", name: "name", widget: "string"}
-              - {label: "Rôle/fonction", name: "role", widget: "string"}
-              - {label: "Institution", name: "institution", widget: "string"}
-              - {label: "Photo", name: "photo", widget: "image"}
-              - {label: "Bio", name: "bio", widget: "text"}
+              - { label: "Nom", name: "name", widget: "string" }
+              - { label: "Rôle/fonction", name: "role", widget: "string" }
+              - { label: "Institution", name: "institution", widget: "string" }
+              - { label: "Photo", name: "photo", widget: "image" }
+              - { label: "Bio", name: "bio", widget: "text" }
   - name: "news"
     label: "Actualités"
     files:
@@ -56,11 +51,11 @@ collections:
             name: "items"
             widget: "list"
             fields:
-              - {label: "Titre", name: "title", widget: "string"}
-              - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
-              - {label: "Image", name: "cover", widget: "image"}
-              - {label: "Chapo", name: "excerpt", widget: "text"}
-              - {label: "Corps", name: "body", widget: "text"}
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+              - { label: "Image", name: "cover", widget: "image" }
+              - { label: "Chapo", name: "excerpt", widget: "text" }
+              - { label: "Corps", name: "body", widget: "text" }
   - name: "program"
     label: "Programme"
     files:
@@ -68,31 +63,31 @@ collections:
         label: "Planning/Sessions"
         name: "program"
         fields:
-          - {label: "Titre de page", name: "title", widget: "string"}
+          - { label: "Titre de page", name: "title", widget: "string" }
           - label: "Tracks"
             name: "tracks"
             widget: "list"
             fields:
-              - {label: "ID", name: "id", widget: "string"}
-              - {label: "Libellé", name: "label", widget: "string"}
-              - {label: "Couleur", name: "color", widget: "string"}
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Libellé", name: "label", widget: "string" }
+              - { label: "Couleur", name: "color", widget: "string" }
           - label: "Journées"
             name: "days"
             widget: "list"
             fields:
-              - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
-              - {label: "Libellé", name: "label", widget: "string"}
+              - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+              - { label: "Libellé", name: "label", widget: "string" }
               - label: "Créneaux"
                 name: "slots"
                 widget: "list"
                 fields:
-                  - {label: "Heure", name: "time", widget: "string"}
-                  - {label: "Type", name: "type", widget: "string"}
-                  - {label: "Titre", name: "title", widget: "string"}
+                  - { label: "Heure", name: "time", widget: "string" }
+                  - { label: "Type", name: "type", widget: "string" }
+                  - { label: "Titre", name: "title", widget: "string" }
                   - label: "Intervenants"
                     name: "speakers"
                     widget: "list"
-                    field: {label: "Nom", name: "item", widget: "string"}
+                    field: { label: "Nom", name: "item", widget: "string" }
   - name: "partners"
     label: "Partenaires"
     files:
@@ -100,7 +95,7 @@ collections:
         label: "Partenaires & sponsors"
         name: "partners"
         fields:
-          - {label: "Titre", name: "title", widget: "string"}
+          - { label: "Titre", name: "title", widget: "string" }
           - label: "Tiers"
             name: "tiers"
             widget: "list"
