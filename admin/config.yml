@@ -3,9 +3,16 @@ backend:
   repo: atchouna-blip/jsb3-site
   branch: main
   open_authoring: true
+  client_id: Ov23li1mlYcY7npSm66b
+  client_secret: f9117d88fff1b306f3f84805797c6faddf3cc259
+
 publish_mode: editorial_workflow
+
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
+
+# (collections JSB3 ici)
+
 
 collections:
   - name: "site"
