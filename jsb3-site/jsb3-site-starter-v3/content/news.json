@@ -1,0 +1,26 @@
+{
+  "title": "Actualités",
+  "items": [
+    {
+      "title": "Ouverture des soumissions de résumés",
+      "date": "2025-10-01",
+      "cover": "/assets/uploads/news-submission.jpg",
+      "excerpt": "La fenêtre de dépôt des résumés ouvre le 1er octobre (FR/EN).",
+      "body": "<p>Déposez en ligne jusqu’au 31 décembre. Formats acceptés : communication orale, poster, ou speed talk 180 secondes.</p>"
+    },
+    {
+      "title": "Accord de co-organisation UB × IPB",
+      "date": "2025-09-20",
+      "cover": "/assets/uploads/news-coorg.jpg",
+      "excerpt": "Les JSB3 sont co-organisées par l’Université de Bangui et l’Institut Pasteur de Bangui.",
+      "body": "<p>L’événement rassemblera la communauté scientifique autour d’approches intégrées One Health.</p>"
+    },
+    {
+      "title": "Appel aux sponsors & partenaires",
+      "date": "2025-09-10",
+      "cover": "/assets/uploads/news-sponsors.jpg",
+      "excerpt": "Le dossier partenaires est disponible pour les organisations souhaitant soutenir l’événement.",
+      "body": "<p>Téléchargez le kit partenaires et bénéficiez d’une visibilité renforcée pendant les JSB3.</p>"
+    }
+  ]
+}

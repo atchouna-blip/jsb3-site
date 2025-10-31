@@ -1,0 +1,148 @@
+{
+  "title": "Programme",
+  "tracks": [
+    {
+      "id": "one-health",
+      "label": "One Health",
+      "color": "#00B5B2"
+    },
+    {
+      "id": "sante-publique",
+      "label": "Santé publique",
+      "color": "#4CAF50"
+    },
+    {
+      "id": "innovation",
+      "label": "Innovation & Tech",
+      "color": "#003366"
+    }
+  ],
+  "days": [
+    {
+      "date": "2026-05-25",
+      "label": "Lundi 25 mai 2026",
+      "slots": [
+        {
+          "time": "08:00",
+          "type": "accueil",
+          "title": "Accueil & retrait des badges",
+          "room": "Hall principal"
+        },
+        {
+          "time": "09:00",
+          "type": "pleniere",
+          "title": "Ouverture officielle",
+          "speakers": [
+            "Autorités UB & IPB"
+          ],
+          "room": "Salle A"
+        },
+        {
+          "time": "10:00",
+          "type": "keynote",
+          "title": "One Health en contexte tropical",
+          "speakers": [
+            "Invité·e principal·e"
+          ],
+          "track": "one-health",
+          "room": "Salle A"
+        },
+        {
+          "time": "11:15",
+          "type": "session",
+          "title": "Diagnostics intégrés fièvres de l’enfant (MEDICINE)",
+          "speakers": [
+            "Panel multi-sites"
+          ],
+          "track": "innovation",
+          "room": "Salle B"
+        },
+        {
+          "time": "14:00",
+          "type": "session",
+          "title": "Surveillance & entomologie",
+          "speakers": [
+            "Dr Claire SANGBA-KEMBI et coll."
+          ],
+          "track": "sante-publique",
+          "room": "Salle A"
+        },
+        {
+          "time": "16:00",
+          "type": "posters",
+          "title": "Session Posters & Café",
+          "room": "Espace expo"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-26",
+      "label": "Mardi 26 mai 2026",
+      "slots": [
+        {
+          "time": "09:00",
+          "type": "keynote",
+          "title": "Données, IA et infrastructures locales",
+          "speakers": [
+            "Keynote invité·e"
+          ],
+          "track": "innovation",
+          "room": "Salle A"
+        },
+        {
+          "time": "10:30",
+          "type": "session",
+          "title": "Hépatites & oncogènes",
+          "speakers": [
+            "Pr Claudine BEKONDI et coll."
+          ],
+          "track": "sante-publique",
+          "room": "Salle B"
+        },
+        {
+          "time": "14:00",
+          "type": "session",
+          "title": "Zoonoses & interface animal-humain",
+          "speakers": [
+            "Panel multidisciplinaire"
+          ],
+          "track": "one-health",
+          "room": "Salle A"
+        },
+        {
+          "time": "17:00",
+          "type": "speed",
+          "title": "Speed talks 180s (sélection)",
+          "track": "innovation",
+          "room": "Salle A"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-27",
+      "label": "Mercredi 27 mai 2026",
+      "slots": [
+        {
+          "time": "09:00",
+          "type": "table-ronde",
+          "title": "Politiques publiques & transfert de connaissances",
+          "track": "sante-publique",
+          "room": "Salle A"
+        },
+        {
+          "time": "11:00",
+          "type": "session",
+          "title": "Ateliers méthodologiques (ODK, LIMS, QA/QC)",
+          "track": "innovation",
+          "room": "Salles parallèles"
+        },
+        {
+          "time": "15:30",
+          "type": "cloture",
+          "title": "Remise des prix & clôture",
+          "room": "Salle A"
+        }
+      ]
+    }
+  ]
+}

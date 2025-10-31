@@ -1,0 +1,60 @@
+{
+  "title": "Partenaires & Sponsors",
+  "tiers": [
+    {
+      "name": "Platine",
+      "items": [
+        {
+          "name": "Partenaire Platine 1",
+          "logo": "/assets/uploads/partner-platine1.png",
+          "url": "https://example.com"
+        }
+      ]
+    },
+    {
+      "name": "Or",
+      "items": [
+        {
+          "name": "Partenaire Or 1",
+          "logo": "/assets/uploads/partner-or1.png",
+          "url": "https://example.com"
+        },
+        {
+          "name": "Partenaire Or 2",
+          "logo": "/assets/uploads/partner-or2.png",
+          "url": "https://example.com"
+        }
+      ]
+    },
+    {
+      "name": "Argent",
+      "items": [
+        {
+          "name": "Partenaire Argent 1",
+          "logo": "/assets/uploads/partner-argent1.png",
+          "url": "https://example.com"
+        },
+        {
+          "name": "Partenaire Argent 2",
+          "logo": "/assets/uploads/partner-argent2.png",
+          "url": "https://example.com"
+        },
+        {
+          "name": "Partenaire Argent 3",
+          "logo": "/assets/uploads/partner-argent3.png",
+          "url": "https://example.com"
+        }
+      ]
+    },
+    {
+      "name": "Soutien",
+      "items": [
+        {
+          "name": "Partenaire Soutien 1",
+          "logo": "/assets/uploads/partner-soutien1.png",
+          "url": "https://example.com"
+        }
+      ]
+    }
+  ]
+}

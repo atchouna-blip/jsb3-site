@@ -1,0 +1,19 @@
+{
+  "title": "Conférenciers invités",
+  "items": [
+    {
+      "name": "Pr. Emmanuel NAKOUNÉ",
+      "role": "Directeur Général, Institut Pasteur de Bangui",
+      "institution": "Institut Pasteur de Bangui (RCA)",
+      "photo": "/assets/uploads/speaker-nakoune.jpg",
+      "bio": "Virologue, spécialiste des maladies émergentes, avec un focus sur la santé publique et la réponse aux épidémies."
+    },
+    {
+      "name": "Dr. Claudine BEKONDI",
+      "role": "Cheffe de service — Hépatites & Virus Oncogènes",
+      "institution": "Institut Pasteur de Bangui (RCA)",
+      "photo": "/assets/uploads/speaker-bekondi.jpg",
+      "bio": "Expérience en virologie et santé publique, engagée sur les enjeux One Health et la recherche translationnelle."
+    }
+  ]
+}

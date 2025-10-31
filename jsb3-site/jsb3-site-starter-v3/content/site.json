@@ -1,0 +1,173 @@
+{
+  "eventName": "3ᵉ Journées Scientifiques de Bangui",
+  "theme": "Une Seule Santé : enjeux majeurs, opportunités et perspectives",
+  "datesDisplay": "25–27 mai 2026",
+  "startDate": "2026-05-25",
+  "endDate": "2026-05-27",
+  "venueDisplay": "Société Lory & Associés, Bangui — République centrafricaine",
+  "venue": {
+    "name": "Société Lory & Associés",
+    "city": "Bangui",
+    "country": "RCA"
+  },
+  "urls": {
+    "register": "https://tally.so/r/VOTRE_LIEN_INSCRIPTION",
+    "submit": "https://tally.so/r/VOTRE_LIEN_SOUMISSION",
+    "programPdf": "#",
+    "partnersPdf": "#"
+  },
+  "coorg": [
+    {
+      "name": "Institut Pasteur de Bangui",
+      "logo": "/IP-PN Bangui (3).png",
+      "alt": "Institut Pasteur de Bangui"
+    },
+    {
+      "name": "Université de Bangui",
+      "logo": "/télécharger.jpg",
+      "alt": "Université de Bangui"
+    }
+  ],
+  "subthemes": [
+    {
+      "text": "Surveillance (humaine, animale, environnementale)"
+    },
+    {
+      "text": "Outils diagnostics, thérapeutiques & préventifs"
+    },
+    {
+      "text": "Prises en charge thérapeutiques & psycho-sociales"
+    },
+    {
+      "text": "Sensibilités & résistances des pathogènes et vecteurs"
+    },
+    {
+      "text": "Approches anthropologiques, sociologiques, économiques & politico-juridiques"
+    },
+    {
+      "text": "Sécurité alimentaire"
+    },
+    {
+      "text": "Engagement communautaire"
+    }
+  ],
+  "milestones": [
+    {
+      "date": "01/10/2025",
+      "text": "Ouverture des soumissions de résumés"
+    },
+    {
+      "date": "31/12/2025",
+      "text": "Clôture des soumissions de résumés"
+    },
+    {
+      "date": "20/02/2026",
+      "text": "Ouverture des inscriptions (jusqu’au 20/04/2026)"
+    },
+    {
+      "date": "25–27/05/2026",
+      "text": "JSB3 (plénières, orales, speed 180s, posters, panels, symposiums, stands)"
+    }
+  ],
+  "pricing": [
+    {
+      "label": "Professionnels / Nord",
+      "fcfa": "100 000",
+      "eur": "150 €"
+    },
+    {
+      "label": "Professionnels & doctorants / Sud",
+      "fcfa": "20 000",
+      "eur": "30 €"
+    },
+    {
+      "label": "Étudiants / Sud",
+      "fcfa": "10 000",
+      "eur": "15 €"
+    }
+  ],
+  "pricingNote": "Majoration de +35 % après le 20/04/2026.",
+  "program": [
+    {
+      "day": "Jour 1 — 25 mai",
+      "items": [
+        "Ouverture & plénière",
+        "Sessions orales thématiques",
+        "Posters",
+        "Panel One Health"
+      ]
+    },
+    {
+      "day": "Jour 2 — 26 mai",
+      "items": [
+        "Symposiums",
+        "Speed Talks 180s",
+        "Ateliers & stands"
+      ]
+    },
+    {
+      "day": "Jour 3 — 27 mai",
+      "items": [
+        "Plénière de clôture",
+        "Posters & remise des prix"
+      ]
+    }
+  ],
+  "partners": [
+    {
+      "name": "Partenaire A",
+      "logo": "/assets/uploads/partner-a.png",
+      "alt": "Partenaire A"
+    },
+    {
+      "name": "Partenaire B",
+      "logo": "/assets/uploads/partner-b.png",
+      "alt": "Partenaire B"
+    },
+    {
+      "name": "Partenaire C",
+      "logo": "/assets/uploads/partner-c.png",
+      "alt": "Partenaire C"
+    }
+  ],
+  "committee": [
+    "Présidente : Dr Ionela GOUANDJIKA (IPB)",
+    "Vice-Présidente : Dr Olga Blanche BITEMAN MOBILI (MESRSIT/UB)",
+    "Rapporteur général : Pr Saint-Calvaire Henri DIEMER (UB)",
+    "Rapporteur adjoint : Pr Romaric NZOUMBOU-BOKO (UB/IPB)",
+    "Trésorière : Dr Claudine BEKONDJI (IPB)",
+    "Trésorière adjointe : Dr Nicole POUMAYE (UB)",
+    "Logistique : M. Thibaut BIDO (IPB)",
+    "Mobilisation : Dr Patrick Charly NGBANDEMA (UB)",
+    "Communication : M. Jean-Marc ZOKOUE (IPB)",
+    "Membre permanent : Pr Ag. Alexandre MANIRAKIZA (IPB)"
+  ],
+  "faq": [
+    {
+      "q": "Quelles langues ?",
+      "a": "Présentations orales en français. Slides et posters acceptés en FR/EN."
+    },
+    {
+      "q": "Format des résumés ?",
+      "a": "≤ 300 mots (FR/EN), Times 11, interligne 1,15. Sections : Introduction, Méthodes, Résultats, Conclusion."
+    },
+    {
+      "q": "Oral ou poster ?",
+      "a": "Préciser au dépôt. Posters 80×110 cm (portrait). Sessions orales & speed 180s."
+    },
+    {
+      "q": "Lieu & logistique",
+      "a": "Société Lory & Associés, Bangui (RCA). Informations pratiques mises à jour sur le site."
+    }
+  ],
+  "contact": {
+    "email": "contact@jsb3bangui.org",
+    "address": "Institut Pasteur de Bangui, Avenue des Martyrs, Bangui (RCA)",
+    "phone": "+236 XX XX XX XX"
+  },
+  "seo": {
+    "title": "JSB3 — 3ᵉ Journées Scientifiques de Bangui | One Health",
+    "description": "JSB3 : 25–27 mai 2026 à Bangui. Soumission de résumés, inscriptions, programme & partenaires sur le site officiel.",
+    "ogImage": "/ee3fc8b7-2e9e-4ffc-bbf3-0458b2515d56.png"
+  }
+}
