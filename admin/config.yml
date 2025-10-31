@@ -1,0 +1,4 @@
+backend:
+  name: github
+  repo: atchouna-blip/jsb3-site
+  branch: main
