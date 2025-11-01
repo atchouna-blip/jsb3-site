@@ -190,19 +190,19 @@ collections:
     label: "Partenaires"
     files:
       - file: "content/partners.json"
-        label: "Niveaux & logos"
+        label: "Partenaires & sponsors"
         name: "partners"
         fields:
-          - { label: "Titre de page", name: "title", widget: "string" }
-          - label: "Niveaux"
+          - { label: "Titre", name: "title", widget: "string" }
+          - label: "Tiers"
             name: "tiers"
             widget: "list"
             fields:
               - { label: "Nom du niveau", name: "name", widget: "string" }
-              - { label: "Partenaires"
+              - label: "Partenaires"
                 name: "items"
                 widget: "list"
                 fields:
                   - { label: "Nom", name: "name", widget: "string" }
                   - { label: "Logo", name: "logo", widget: "image" }
-                  - { label: "URL", name: "url", widget: "string", required: false }
+                  - { label: "URL", name: "url", widget: "string" }
