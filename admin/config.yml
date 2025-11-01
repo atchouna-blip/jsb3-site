@@ -1,14 +1,13 @@
 backend:
-  name: github
-  repo: atchouna-blip/jsb3-site
-  branch: main
-  open_authoring: true
-  client_id: Ov23li1mlYcY7npSm66b
-  client_secret: f9117d88fff1b306f3f84805797c6faddf3cc259
+  name: "git-gateway"
+  branch: "main"
 
-publish_mode: editorial_workflow
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
+
+site_url: "https://www.jsb3bangui.org"
+logo_url: "/LOGO JSB3.png"
+locale: "fr"
 
 collections:
   - name: "site"
@@ -21,7 +20,90 @@ collections:
           - { label: "Nom de l’événement", name: "eventName", widget: "string" }
           - { label: "Thème", name: "theme", widget: "string" }
           - { label: "Dates (affichage)", name: "datesDisplay", widget: "string" }
+          - { label: "Dates (ISO - début)", name: "startDate", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+          - { label: "Dates (ISO - fin)", name: "endDate", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
           - { label: "Lieu (affichage)", name: "venueDisplay", widget: "string" }
+          - label: "Lieu (structuré)"
+            name: "venue"
+            widget: "object"
+            fields:
+              - { label: "Nom", name: "name", widget: "string" }
+              - { label: "Ville", name: "city", widget: "string" }
+              - { label: "Pays", name: "country", widget: "string" }
+          - label: "URLs"
+            name: "urls"
+            widget: "object"
+            fields:
+              - { label: "Inscription (Tally)", name: "register", widget: "string", required: false }
+              - { label: "Soumission (Tally)", name: "submit", widget: "string", required: false }
+              - { label: "Programme (PDF)", name: "programPdf", widget: "string", required: false }
+              - { label: "Dossier partenaires (PDF)", name: "partnersPdf", widget: "string", required: false }
+          - label: "Logos co-organisateurs"
+            name: "coorg"
+            widget: "list"
+            fields:
+              - { label: "Nom", name: "name", widget: "string" }
+              - { label: "Logo", name: "logo", widget: "image" }
+              - { label: "Texte alternatif (alt)", name: "alt", widget: "string", required: false }
+          - label: "Sous-thèmes"
+            name: "subthemes"
+            widget: "list"
+            field: { label: "Texte", name: "text", widget: "string" }
+          - label: "Dates importantes"
+            name: "milestones"
+            widget: "list"
+            fields:
+              - { label: "Date", name: "date", widget: "string" }
+              - { label: "Texte", name: "text", widget: "string" }
+          - label: "Tarifs"
+            name: "pricing"
+            widget: "list"
+            fields:
+              - { label: "Catégorie", name: "label", widget: "string" }
+              - { label: "Montant (FCFA)", name: "fcfa", widget: "string" }
+              - { label: "Montant (€)", name: "eur", widget: "string" }
+          - { label: "Note tarifs (ex: majoration)", name: "pricingNote", widget: "string", required: false }
+          - label: "Programme (jours)"
+            name: "program"
+            widget: "list"
+            fields:
+              - { label: "Jour", name: "day", widget: "string" }
+              - label: "Éléments"
+                name: "items"
+                widget: "list"
+                field: { label: "Item", name: "item", widget: "string" }
+          - label: "Partenaires / Sponsors (logos)"
+            name: "partners"
+            widget: "list"
+            fields:
+              - { label: "Nom", name: "name", widget: "string" }
+              - { label: "Logo", name: "logo", widget: "image" }
+              - { label: "Texte alternatif (alt)", name: "alt", widget: "string", required: false }
+          - label: "Comité d’organisation"
+            name: "committee"
+            widget: "list"
+            field: { label: "Membre (rôle + nom + aff.)", name: "member", widget: "string" }
+          - label: "FAQ"
+            name: "faq"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "q", widget: "string" }
+              - { label: "Réponse (HTML autorisé)", name: "a", widget: "text" }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Adresse postale", name: "address", widget: "text", required: false }
+              - { label: "Téléphone", name: "phone", widget: "string", required: false }
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "OG image", name: "ogImage", widget: "image", required: false }
+
   - name: "speakers"
     label: "Conférenciers invités"
     files:
@@ -35,10 +117,11 @@ collections:
             widget: "list"
             fields:
               - { label: "Nom", name: "name", widget: "string" }
-              - { label: "Rôle/fonction", name: "role", widget: "string" }
-              - { label: "Institution", name: "institution", widget: "string" }
-              - { label: "Photo", name: "photo", widget: "image" }
-              - { label: "Bio", name: "bio", widget: "text" }
+              - { label: "Rôle / fonction", name: "role", widget: "string", required: false }
+              - { label: "Institution", name: "institution", widget: "string", required: false }
+              - { label: "Photo", name: "photo", widget: "image", required: false }
+              - { label: "Bio (HTML autorisé)", name: "bio", widget: "text", required: false }
+
   - name: "news"
     label: "Actualités"
     files:
@@ -52,64 +135,74 @@ collections:
             widget: "list"
             fields:
               - { label: "Titre", name: "title", widget: "string" }
-              - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
-              - { label: "Image", name: "cover", widget: "image" }
-              - { label: "Chapo", name: "excerpt", widget: "text" }
-              - { label: "Corps", name: "body", widget: "text" }
+              - { label: "Date (YYYY-MM-DD)", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+              - { label: "Image", name: "cover", widget: "image", required: false }
+              - { label: "Chapo", name: "excerpt", widget: "text", required: false }
+              - { label: "Corps (HTML autorisé)", name: "body", widget: "text", required: false }
+
+  - name: "guidelines"
+    label: "Soumission — Guide"
+    files:
+      - file: "content/guidelines.md"
+        label: "Texte du guide"
+        name: "guide"
+        fields:
+          - { label: "Corps (Markdown)", name: "body", widget: "markdown" }
+
   - name: "program"
     label: "Programme"
     files:
       - file: "content/program.json"
-        label: "Planning/Sessions"
+        label: "Planning par journée"
         name: "program"
         fields:
           - { label: "Titre de page", name: "title", widget: "string" }
-          - label: "Tracks"
+          - label: "Pistes/Tracks"
             name: "tracks"
             widget: "list"
             fields:
               - { label: "ID", name: "id", widget: "string" }
               - { label: "Libellé", name: "label", widget: "string" }
-              - { label: "Couleur", name: "color", widget: "string" }
+              - { label: "Couleur (hex)", name: "color", widget: "string", required: false }
           - label: "Journées"
             name: "days"
             widget: "list"
             fields:
-              - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+              - { label: "Date (YYYY-MM-DD)", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
               - { label: "Libellé", name: "label", widget: "string" }
               - label: "Créneaux"
                 name: "slots"
                 widget: "list"
                 fields:
                   - { label: "Heure", name: "time", widget: "string" }
-                  - { label: "Type", name: "type", widget: "string" }
+                  - { label: "Type", name: "type", widget: "string", required: false }
                   - { label: "Titre", name: "title", widget: "string" }
-                  - label: "Intervenants"
+                  - label: "Intervenants (liste)"
                     name: "speakers"
                     widget: "list"
                     field: { label: "Nom", name: "item", widget: "string" }
+                    required: false
+                  - { label: "Piste (track id)", name: "track", widget: "string", required: false }
+                  - { label: "Salle", name: "room", widget: "string", required: false }
+                  - { label: "Résumé", name: "abstract", widget: "text", required: false }
+
   - name: "partners"
     label: "Partenaires"
     files:
       - file: "content/partners.json"
-        label: "Partenaires & sponsors"
+        label: "Niveaux & logos"
         name: "partners"
         fields:
-          - { label: "Titre", name: "title", widget: "string" }
-          - label: "Tiers"
+          - { label: "Titre de page", name: "title", widget: "string" }
+          - label: "Niveaux"
             name: "tiers"
             widget: "list"
             fields:
               - { label: "Nom du niveau", name: "name", widget: "string" }
-              - label: "Partenaires"
+              - { label: "Partenaires"
                 name: "items"
                 widget: "list"
                 fields:
                   - { label: "Nom", name: "name", widget: "string" }
                   - { label: "Logo", name: "logo", widget: "image" }
-                  - { label: "URL", name: "url", widget: "string" }
-
-media_library:
-  name: uploadcare
-  config:
-    publicKey: demopublickey
+                  - { label: "URL", name: "url", widget: "string", required: false }
