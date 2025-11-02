@@ -1,6 +1,6 @@
 
 [build]
-  publish = "/"
+  publish = "jsb3-site/jsb3-site-starter-v3"
   command = ""
 
 [[headers]]
