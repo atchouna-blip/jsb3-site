@@ -6,7 +6,6 @@ media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 site_url: "https://www.jsb3bangui.org"
-logo_url: "/LOGO JSB3.png"
 locale: "fr"
 
 collections:
@@ -17,7 +16,7 @@ collections:
         label: "Paramètres & Sections"
         name: "site"
         fields:
-          - { label: "Nom de l’événement", name: "eventName", widget: "string" }
+          - { label: "Nom de l'événement", name: "eventName", widget: "string" }
           - { label: "Thème", name: "theme", widget: "string" }
           - { label: "Dates (affichage)", name: "datesDisplay", widget: "string" }
           - { label: "Dates (ISO - début)", name: "startDate", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
@@ -34,117 +33,51 @@ collections:
             name: "urls"
             widget: "object"
             fields:
-              - { label: "Inscription (Tally)", name: "register", widget: "string" }
-              - { label: "Soumission (Tally)", name: "submit", widget: "string" }
-              - { label: "Programme (PDF)", name: "programPdf", widget: "string", required: false }
-              - { label: "Dossier partenaires (PDF)", name: "partnersPdf", widget: "string", required: false }
-          - label: "Logos co-organisateurs"
-            name: "coorg"
-            widget: "list"
-            fields:
-              - { label: "Nom", name: "name", widget: "string" }
-              - { label: "Logo", name: "logo", widget: "image" }
-              - { label: "Alt", name: "alt", widget: "string" }
-          - label: "Sous-thèmes"
-            name: "subthemes"
-            widget: "list"
-            field: { label: "Texte", name: "text", widget: "string" }
-          - label: "Dates importantes"
-            name: "milestones"
-            widget: "list"
-            fields:
-              - { label: "Date", name: "date", widget: "string" }
-              - { label: "Texte", name: "text", widget: "string" }
-          - label: "Tarifs"
-            name: "pricing"
-            widget: "list"
-            fields:
-              - { label: "Catégorie", name: "label", widget: "string" }
-              - { label: "Montant (FCFA)", name: "fcfa", widget: "string" }
-              - { label: "Montant (€)", name: "eur", widget: "string" }
-          - { label: "Note tarifs (ex: majoration)", name: "pricingNote", widget: "string", required: false }
-          - label: "Programme (jours)"
-            name: "program"
-            widget: "list"
-            fields:
-              - { label: "Jour", name: "day", widget: "string" }
-              - label: "Éléments"
-                name: "items"
-                widget: "list"
-                field: { label: "Item", name: "item", widget: "string" }
-          - label: "Partenaires/Sponsors (logos)"
-            name: "partners"
-            widget: "list"
-            fields:
-              - { label: "Nom", name: "name", widget: "string" }
-              - { label: "Logo", name: "logo", widget: "image" }
-              - { label: "Alt", name: "alt", widget: "string" }
-          - label: "Comité d’organisation"
-            name: "committee"
-            widget: "list"
-            field: { label: "Membre (rôle + nom + aff.)", name: "member", widget: "string" }
+              - { label: "Site principal", name: "main", widget: "string", required: false }
+              - { label: "Soumission", name: "submission", widget: "string", required: false }
+              - { label: "Inscription", name: "register", widget: "string", required: false }
+              - { label: "Programme", name: "program", widget: "string", required: false }
+              - { label: "Actualités", name: "news", widget: "string", required: false }
+              - { label: "Conférenciers", name: "speakers", widget: "string", required: false }
+              - { label: "Partenaires", name: "partners", widget: "string", required: false }
           - label: "FAQ"
             name: "faq"
             widget: "list"
             fields:
-              - { label: "Question", name: "q", widget: "string" }
-              - { label: "Réponse (HTML autorisé)", name: "a", widget: "text" }
-          - label: "Contact"
-            name: "contact"
-            widget: "object"
-            fields:
-              - { label: "Email", name: "email", widget: "string" }
-              - { label: "Adresse postale", name: "address", widget: "text" }
-              - { label: "Téléphone", name: "phone", widget: "string", required: false }
-          - label: "SEO"
-            name: "seo"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "OG image", name: "ogImage", widget: "image", required: false }
-
-  - name: "speakers"
-    label: "Conférenciers invités"
-    files:
-      - file: "content/speakers.json"
-        label: "Liste des conférenciers"
-        name: "speakers"
-        fields:
-          - { label: "Titre de section", name: "title", widget: "string" }
-          - label: "Conférenciers"
-            name: "items"
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Réponse (Markdown)", name: "answer", widget: "markdown" }
+            required: false
+          - label: "Comité scientifique"
+            name: "committee"
             widget: "list"
             fields:
               - { label: "Nom", name: "name", widget: "string" }
-              - { label: "Rôle / fonction", name: "role", widget: "string" }
-              - { label: "Institution", name: "institution", widget: "string" }
-              - { label: "Photo", name: "photo", widget: "image" }
-              - { label: "Bio (HTML autorisé)", name: "bio", widget: "text" }
+              - { label: "Affiliation", name: "affiliation", widget: "string" }
+            required: false
 
-  - name: "news"
-    label: "Actualités"
-    files:
       - file: "content/news.json"
-        label: "Articles"
+        label: "Actualités (page)"
         name: "news"
         fields:
-          - { label: "Titre de section", name: "title", widget: "string" }
+          - { label: "Titre de page", name: "title", widget: "string" }
           - label: "Articles"
-            name: "items"
+            name: "articles"
             widget: "list"
             fields:
               - { label: "Titre", name: "title", widget: "string" }
-              - { label: "Date (YYYY-MM-DD)", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
-              - { label: "Image", name: "cover", widget: "image", required: false }
-              - { label: "Chapo", name: "excerpt", widget: "text", required: false }
-              - { label: "Corps (HTML autorisé)", name: "body", widget: "text" }
+              - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+              - { label: "Auteur", name: "author", widget: "string", required: false }
+              - { label: "Corps (Markdown)", name: "body", widget: "markdown" }
 
-  - name: "guidelines"
-    label: "Soumission — Guide"
-    files:
-      - file: "content/guidelines.md"
-        label: "Texte du guide"
+      - file: "content/submission.json"
+        label: "Soumission (page)"
+        name: "submission"
+        fields:
+          - { label: "Titre de page", name: "title", widget: "string" }
+          - { label: "Corps (Markdown)", name: "body", widget: "markdown" }
+
+      - file: "content/guide.json"
+        label: "Guide pratique (page)"
         name: "guide"
         fields:
           - { label: "Corps (Markdown)", name: "body", widget: "markdown" }
@@ -206,3 +139,21 @@ collections:
                   - { label: "Nom", name: "name", widget: "string" }
                   - { label: "Logo", name: "logo", widget: "image" }
                   - { label: "URL", name: "url", widget: "string" }
+
+  - name: "speakers"
+    label: "Conférenciers"
+    files:
+      - file: "content/speakers.json"
+        label: "Liste"
+        name: "speakers"
+        fields:
+          - { label: "Titre de page", name: "title", widget: "string" }
+          - label: "Conférenciers"
+            name: "list"
+            widget: "list"
+            fields:
+              - { label: "Nom", name: "name", widget: "string" }
+              - { label: "Affiliation", name: "affiliation", widget: "string" }
+              - { label: "Titre de présentation", name: "talkTitle", widget: "string", required: false }
+              - { label: "Biographie (Markdown)", name: "bio", widget: "markdown", required: false }
+              - { label: "Photo", name: "photo", widget: "image", required: false }
