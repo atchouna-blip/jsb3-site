@@ -1,5 +1,4 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
@@ -15,6 +14,16 @@
 <body>
   <img class="login-logo" src="/LOGO JSB3.png" alt="JSB3" />
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  <script>CMS.init();</script>
+  <script>
+    // Handle invitation token redirect
+    if (window.location.hash.includes('invitation_token')) {
+      const params = new URLSearchParams(window.location.hash.substring(1));
+      const token = params.get('invitation_token');
+      if (token) {
+        window.location.href = `/#/invite/${token}`;
+      }
+    }
+    CMS.init();
+  </script>
 </body>
 </html>
